@@ -1,0 +1,71 @@
+{
+  "version": "2.4.5",
+  "release_date": "2026-09-01",
+  "changelog": "V2.4.5 更新内容：\n1. 修复新电脑安装后PyQt6模块加载失败问题（UPX排除Qt6 DLL）\n2. 修复AI模型管理与声音克隆模块路径不一致问题（统一路径入口）\n3. 模块加载时立即读取用户自定义存储路径，不再仅在AI模型管理打开时读取\n4. 恢复自动更新功能，使用新GitHub仓库发布成品更新",
+  "modules": {
+    "main_app": {
+      "version": "2.4.5",
+      "files": [
+        "IMiCutAuto.exe",
+        "_internal/"
+      ],
+      "url": "",
+      "size": 850000000,
+      "sha256": "",
+      "note": "主程序更新包，包含IMiCutAuto.exe和_internal目录"
+    },
+    "minimcut": {
+      "version": "2.4.5",
+      "files": [
+        "csharp_bin/MixCut.exe"
+      ],
+      "url": "",
+      "size": 155648,
+      "sha256": "",
+      "note": "达人视频混剪模块"
+    },
+    "subtitle_remover": {
+      "version": "2.4.5",
+      "files": [
+        "subtitle_remover_bin/VideoSubtitleRemover.exe"
+      ],
+      "url": "",
+      "size": 130754874,
+      "sha256": "",
+      "note": "硬字幕去除器模块"
+    },
+    "ecom_video": {
+      "version": "2.4.5",
+      "files": [
+        "ecom_video_bin/IMiVideoAI.exe"
+      ],
+      "url": "",
+      "size": 112593905,
+      "sha256": "",
+      "note": "短视频生成器模块"
+    },
+    "voicebox": {
+      "version": "2.4.5",
+      "files": [
+        "voicebox_bin/Voicebox.exe",
+        "voicebox_bin/IMiVoice.exe",
+        "voicebox_bin/voicebox-server.exe",
+        "voicebox_bin/voicebox-mcp.exe"
+      ],
+      "url": "",
+      "size": 750000000,
+      "sha256": "",
+      "note": "声音克隆模块"
+    }
+  },
+  "installer": {
+    "version": "2.4.5",
+    "parts": 2,
+    "urls": [
+      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.4.5/IMiCutAuto_2.4.5_260901_x64_Setup.7z.001",
+      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.4.5/IMiCutAuto_2.4.5_260901_x64_Setup.7z.002"
+    ],
+    "archive_type": "7z",
+    "note": "完整安装包（7z分卷，需下载所有分卷后用7zip解压）"
+  }
+}
