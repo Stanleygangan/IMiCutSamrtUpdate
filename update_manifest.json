@@ -1,10 +1,10 @@
 {
-  "version": "2.6.4",
-  "release_date": "2026-09-04",
-  "changelog": "V2.6.4 更新内容：\n1. 【界面修复-根因】硬字幕去除器嵌入主程序后，焦点切换时不再因 DWM 边框颜色切换而偶尔闪一下（拦截 WM_SETFOCUS/WM_KILLFOCUS 的边框重绘）\n2. 【界面加固】标题栏闪现防护升级：事件过滤器增加 ShowToParent 拦截，新增 changeEvent 兜底，标题栏隐藏定时器 500ms→100ms 压缩闪现窗口\n3. 硬字幕去除器 exe 全新构建并同步为最新版本",
+  "version": "2.6.6",
+  "release_date": "2026-09-05",
+  "changelog": "V2.6.6 更新内容：\n1. 【路径同步-根因】AI模型管理器存储位置与安装时用户选择的模型路径完全一致：安装器配置同时写入安装目录与用户数据目录（规避管理员权限下 localappdata 错位），程序启动时优先读取安装目录配置\n2. 【安装包】预装AI智能混剪4个文本嵌入模型（text2vec-base-chinese、bge-small-zh-v1.5、all-MiniLM-L6-v2、paraphrase-MiniLM-L6-v2）+ Whisper语音识别模型（ggml base/small/large-v3-turbo），直接装入用户选择的模型路径，装完即显示已就绪\n3. 【弹窗修复-根因】硬字幕去除器「选择视频文件」对话框不再被主程序防分离监控周期性隐藏（此前弹窗刚打开就被 SW_HIDE 导致模态卡死，只能返回首页）\n4. 【闪烁修复】防分离监控不再与Qt窗口容器周期性拉扯SetParent（消除无操作时嵌入画面突然闪一下）；对话框类窗口（#32770）与被嵌入窗口拥有的窗口永久豁免隐藏",
   "modules": {
     "main_app": {
-      "version": "2.6.4",
+      "version": "2.6.6",
       "files": [
         "IMiCutAuto.exe",
         "_internal/"
@@ -15,7 +15,7 @@
       "note": "主程序更新包，包含IMiCutAuto.exe和_internal目录"
     },
     "minimcut": {
-      "version": "2.6.4",
+      "version": "2.6.6",
       "files": [
         "csharp_bin/MixCut.exe"
       ],
@@ -25,27 +25,27 @@
       "note": "达人视频混剪模块"
     },
     "subtitle_remover": {
-      "version": "2.6.4",
+      "version": "2.6.6",
       "files": [
         "subtitle_remover_bin/VideoSubtitleRemover.exe"
       ],
-      "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.6.4/subtitle_remover_module.zip",
+      "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.6.6/subtitle_remover_module.zip",
       "size": 1318000000,
       "sha256": "",
       "note": "硬字幕去除器模块（含LAMA/STTN_DET/PROPAINTER修复版）"
     },
     "ecom_video": {
-      "version": "2.6.4",
+      "version": "2.6.6",
       "files": [
         "ecom_video_bin/IMiVideoAI.exe"
       ],
-      "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.6.4/ecom_video_module.zip",
+      "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.6.6/ecom_video_module.zip",
       "size": 112593905,
       "sha256": "",
       "note": "短视频生成器模块"
     },
     "voicebox": {
-      "version": "2.6.4",
+      "version": "2.6.6",
       "files": [
         "voicebox_bin/Voicebox.exe",
         "voicebox_bin/IMiVoice.exe",
@@ -54,18 +54,18 @@
         "voicebox_bin/voicebox-server-x86_64-pc-windows-msvc.exe",
         "voicebox_bin/voicebox-mcp-x86_64-pc-windows-msvc.exe"
       ],
-      "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.6.4/voicebox_module.zip",
+      "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.6.6/voicebox_module.zip",
       "size": 750000000,
       "sha256": "",
       "note": "声音克隆模块"
     }
   },
   "installer": {
-    "version": "2.6.4",
+    "version": "2.6.6",
     "parts": 2,
     "urls": [
-      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.6.4/IMiCutAuto_2.6.4_260904_x64.7z.001",
-      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.6.4/IMiCutAuto_2.6.4_260904_x64.7z.002"
+      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.6.6/IMiCutAuto_2.6.6_260905_x64.7z.001",
+      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.6.6/IMiCutAuto_2.6.6_260905_x64.7z.002"
     ],
     "archive_type": "7z",
     "note": "完整安装包（7z分卷，需下载所有分卷后用7zip解压）"
