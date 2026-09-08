@@ -1,18 +1,18 @@
 {
-  "version": "2.6.6",
-  "release_date": "2026-09-05",
-  "changelog": "V2.6.6 更新内容：\n1. 【路径同步-根因】AI模型管理器存储位置与安装时用户选择的模型路径完全一致：安装器配置同时写入安装目录与用户数据目录（规避管理员权限下 localappdata 错位），程序启动时优先读取安装目录配置\n2. 【安装包】预装AI智能混剪4个文本嵌入模型（text2vec-base-chinese、bge-small-zh-v1.5、all-MiniLM-L6-v2、paraphrase-MiniLM-L6-v2）+ Whisper语音识别模型（ggml base/small/large-v3-turbo），直接装入用户选择的模型路径，装完即显示已就绪\n3. 【弹窗修复-根因】硬字幕去除器「选择视频文件」对话框不再被主程序防分离监控周期性隐藏（此前弹窗刚打开就被 SW_HIDE 导致模态卡死，只能返回首页）\n4. 【闪烁修复】防分离监控不再与Qt窗口容器周期性拉扯SetParent（消除无操作时嵌入画面突然闪一下）；对话框类窗口（#32770）与被嵌入窗口拥有的窗口永久豁免隐藏",
+  "version": "2.8.3",
+  "release_date": "2026-09-08",
+  "changelog": "V2.8.3 更新内容：\n1. 【AI模型-下载修复】所有HuggingFace模型（声音克隆/语义embedding/LLM等）下载统一落标准缓存结构，启用国内镜像并禁用不兼容的Xet传输，修复新电脑报错「couldn't connect to hf-mirror.com / 缓存中找不到文件」\n2. 【AI模型-导入修复】导入模型文件夹时自动递归识别真正的模型根目录，兼容HuggingFace标准缓存/ModelScope风格/平铺/任意嵌套结构，选下载或解压后的文件夹（或其上级目录）即可，无需手动找snapshots子目录\n3. 【AI模型-各模块导入标准】声音克隆Qwen3-TTS、语义embedding、Qwen2等文件夹模型导入后自动安装为标准HF缓存；CLIP(RN50.pt)、C#Whisper(ggml)、Demucs等单文件模型自动物理复制到各模块标准目录并按期望文件名重命名，用户下载的文件叫什么名字、放在哪里都能被正确识别\n4. 【AI模型-路径统一】AI模型管理器中修改的模型存储路径，现在会同步到语义匹配/CLIP/transformers/声音克隆所有模块的加载路径，解决改路径后下载与查找错位、模型显示未就绪的问题",
   "modules": {
     "main_app": {
-      "version": "2.6.6",
+      "version": "2.8.2",
       "files": [
         "IMiCutAuto.exe",
         "_internal/"
       ],
       "url": "",
-      "size": 850000000,
+      "size": 8500000000,
       "sha256": "",
-      "note": "主程序更新包，包含IMiCutAuto.exe和_internal目录"
+      "note": "主程序（完整安装包见 installer）"
     },
     "minimcut": {
       "version": "2.6.6",
@@ -25,14 +25,14 @@
       "note": "达人视频混剪模块"
     },
     "subtitle_remover": {
-      "version": "2.6.6",
+      "version": "2.4.5",
       "files": [
         "subtitle_remover_bin/VideoSubtitleRemover.exe"
       ],
-      "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.6.6/subtitle_remover_module.zip",
-      "size": 1318000000,
+      "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.8.2/subtitle_remover_module.zip",
+      "size": 1578000000,
       "sha256": "",
-      "note": "硬字幕去除器模块（含LAMA/STTN_DET/PROPAINTER修复版）"
+      "note": "硬字幕去除器模块（v2.4.5：嵌入模式光标控制 + 齿轮设置按钮）"
     },
     "ecom_video": {
       "version": "2.6.6",
@@ -55,17 +55,18 @@
         "voicebox_bin/voicebox-mcp-x86_64-pc-windows-msvc.exe"
       ],
       "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.6.6/voicebox_module.zip",
-      "size": 750000000,
+      "size": 1260000000,
       "sha256": "",
       "note": "声音克隆模块"
     }
   },
   "installer": {
-    "version": "2.6.6",
-    "parts": 2,
+    "version": "2.8.3",
+    "parts": 3,
     "urls": [
-      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.6.6/IMiCutAuto_2.6.6_260905_x64.7z.001",
-      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.6.6/IMiCutAuto_2.6.6_260905_x64.7z.002"
+      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.8.3/IMiCutAuto_2.8.3_260908_x64.7z.001",
+      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.8.3/IMiCutAuto_2.8.3_260908_x64.7z.002",
+      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV2.8.3/IMiCutAuto_2.8.3_260908_x64.7z.003"
     ],
     "archive_type": "7z",
     "note": "完整安装包（7z分卷，需下载所有分卷后用7zip解压）"
