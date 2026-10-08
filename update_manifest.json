@@ -1,11 +1,11 @@
 {
-  "version": "1.0.0.4",
-  "release_date": "2026-10-07",
+  "version": "1.0.0.5",
+  "release_date": "2026-10-08",
   "min_app_version": "1.0.0.2",
-  "changelog": "V1.0.0.4 更新（2026-10-07，安装包 261007 + 增量补丁 261007）：\n1. 【千川·四象限】名单改为可滚动的完整清单，一屏十条、上下滚动看全，不再只给前几条。\n2. 【显示诚实性整类收口】全站 16 处「……等 N 条」式静默截断全部改为完整清单出口，一条数据都不许省略；缺件/失败项同样逐条列出。\n3. 【软件更新弹窗】模块清单补全为程序内全部 7 个模块（此前只显示 4 个，快速剪口播、千川数据分析、拍摄素材整理等被漏掉）；升级前新增「更新内容」明细，本次到底改了哪些条目直接列出来，不再只有一个更新按钮；随完整安装包整体发布、不能单独下载的模块如实标注原因，不会给出点了没反应的按钮；简中 / 繁中 / 英 / 俄四种语言下逐控件实测，按钮与说明文字一律不再超出弹窗。\n4. 【版本对齐】随包全部可执行文件版本统一到 1.0.0.4（主程序、AI 智能混剪、硬字幕去除器、声音克隆链、升级助手）。\n5. 【本轮更新方式】完整安装包与增量补丁同时发布：安装包为 7z 分卷 5 卷共 8,305,000,245 B（约 7.73 GiB，构建 261007）；补丁为 17 个文件 / 2,137,752,572 B（约 1.99 GiB），已装 1.0.0.3 的机器直接用程序内「检查更新」换装，不必重装。两者都只替换程序文件，千川数据、素材整理索引、已下载模型与配置一律不动。\nV1.0.0.3 更新（2026-10-06，安装包 261006b）：\n1. 【新增·千川数据分析】内嵌进创作中心，五页齐全：数据看板、闭环分析、成片库、对标复刻、数据接入；支持 CSV 导入与开放平台同步，盈亏线与阈值可设，可导出例会报告，多账户可切换，表格列宽可拖拽，图表与表格悬浮出当日读数。\n2. 【新增·拍摄素材整理】效率工具页新增「拍摄素材整理」：默认只导出不改原片，隔离需确认，绝不静默删除源素材。\n3. 【增量更新落地】代码补丁 + 进程外原子换装 + 校验失败自动回滚；补丁支持多基线，任一已发布版本都能直接升到最新版，不必逐版追赶。增量只触碰程序文件，用户数据、模型、配置一律不动。\n4. 【下线】短视频生成器与图片转视频下线，首页卡片与安装包可选模块同步换血。\n5. 【显示质量整类收口】口播 / AI 智能混剪 / 千川的裁字、省略号、文字与进度条重叠、悬浮读数时有时无、页头多余横线一次性修掉；简中 / 繁中 / 英 / 俄四语言逐页复验；界面语言只控制显示，不影响转录、词典、提示词与字幕行为。\n6. 【设置隔离】修正组织名/应用名写死导致多个程序设置互相串台；启动时把安装路径写入注册表，便于多位置安装时准确定位。\n7. 【安装包形态】7z 分卷 5 卷共约 7.73 GiB，五卷须放同一目录后用 7-Zip 解压 .7z.001；程序逐卷校验 sha256，缺一卷或摘要不匹配一律拒绝安装。\nV1.0.0.2 更新（2026-10-02，安装包 261002d，完整重建含模型捆绑修复）：\n1. 【随包模型全部真实可用】安装包内置的 whisper ggml 三档与人声分离 demucs 之前是截断件，现已按上游字节数逐卷核对随包发布；安装后首次使用不再触发下载或假就绪。\n2. 【模型就绪判定纠偏】人声分离模型不再以「文件存在」当作就绪（补齐体积下限与实际加载校验）；就绪检测不再把 onnx / openvino 等其它框架的导出件误算成缺件；两张指向不存在仓库的模型卡片已移除。\n3. 【📦 离线部署】AI 模型管理与声音克隆页新增「离线部署」，支持挂载与复制两种模式，部署前预检、部署后复检，离线机器可一次性把全量模型接入。\n4. 【快速剪口播】导入即归一化到工程制式，导出定死 1080P/30fps/48kHz 并提供 1080P/2K/4K 三档；导出路径按工程走；「导入视频」不再误新建工程覆盖当前素材；追加镜头不再报文件被占用；多段素材参数不一致时拼接与导出不再产生坏片；逐字稿说明、倍速按钮、进度条、画幅按钮排版全修。\n5. 【AI 智能混剪】工具条改单排横向滚动且不裁字；「视频字幕」胶囊回到标题同行右对齐；离线闸门补进语音链路；随机语音开关、按文案分类输出目录、原视频音量真正生效；素材台词级 NG/拍摄指令过滤，素材覆盖不再被池截断。\n6. 【达人视频混剪】启动默认回到项目概览；含封面素材自动剔除封面帧；导入按钮收敛为主按钮+选项；大量素材导入不再卡顿；无音轨/尺寸不一致素材的拼接导出不再硬失败。\n7. 【AI 模型管理】四页卡片统一为紧凑清单且文字不裁切；卡片被挤压、深链行遮挡、en/ru 弹窗收不下来等问题修复；模型归属单一真源，跨页跳转可返回。\n8. 【界面语言】第 6 批文案入典（含服务层与代码内直接绘制的字符串：波形/画布/字幕把手占位文字）；简中/繁中/英/俄四种语言逐页复验，俄文混剪页横向溢出与多处裁字消除；界面语言只控制显示，不驱动转录、词典、提示词或字幕行为。\n9. 【窗口与主题】程序启动按屏幕 82%×92% 居中并最大化，模型管理按主窗口 75%×86% 居中；全部模块默认浅色主题；预览支持空格播放/暂停与 F 全屏。\n10. 【更新链安全】更新弹窗体积改为按清单实算（不再写死 3GB）；清单缺任一分卷摘要即拒绝下载；整包解压后强制逐卷校验；被拒绝提权时更新器给出可见反馈。\n11. 【Win11 适配】未签名/SAC 装机前给可见警告；安装期按需开启长路径支持；前置组件失败不再静默成功；ARM64/AVX2 不满足时启动期明确报错。\n12. 【仓库可克隆性】.gitignore 曾吞掉所有包的 __init__.py/__main__.py（克隆即坏），已限定层级并补回；所有可执行文件 PE 版本统一到 1.0.0.2。\n13. 【安装包形态】7z 分卷由 4 卷增加到 5 卷（合计约 7.75 GB），五卷须放同一目录后用 7-Zip 解压 .7z.001。\nV1.0.0.1 更新（2026-09-30 第 9–12 轮修复收口，构建号 260930）：\n1. 【口播·布局】审核页改为 2×2 四区（逐字稿/预览在上，波形/素材顺序在下），四区之间可拖拽调整尺寸\n2. 【口播·语言】英文/俄文界面顶栏不再撑爆窗口，右栏设置页与字体下拉不再超出视口\n3. 【口播·工程】工程可随时保存与加载，空工程也进「最近工程」并标注素材为空，选中即加载不再静默\n4. 【口播·预览】预览总时长等于素材真实时长；美颜/调色/BGM/保留人声在预览里所见即所得；空格播放暂停、F 全屏\n5. 【混剪·按钮】AI 智能混剪工具条按按钮实测宽度换行并支持单排横向滚动，比例按钮与三个操作按钮在简中/繁中/英/俄下均完整可见\n6. 【混剪·选材】新增素材台词级 NG/拍摄指令过滤，素材覆盖不再被池上限截断；成片不满意页 9 项缺陷修复\n7. 【模型管理】四个页面统一为紧凑清单（与口播同款），卡片正文与按钮文案全部入典；模型归属单一真源，其他页深链可返回\n8. 【达人混剪】导入自动剔除封面帧，导入按钮收敛为两个主按钮加选项，大量素材导入不再卡顿\n9. 【安装包】首步即选界面语言并写入程序；构建期剥离运行垃圾，装机后不残留诊断文件；四个分卷的 sha256 已更新为本构建（260930），程序逐卷校验\n\nV1.0.0.1 更新（2026-09-27 全量重建，公测基线）：\n1. 【口播·云端 ASR】快速剪辑口播逐字转录新增可选「火山引擎云端」来源：热词/上下文增强提升专有名词准确率，云端受进程级离线闸门约束（勾选离线即直接不可用），密钥复用 API 配置里的火山引擎条目\n2. 【口播·本地模型档位】本地 faster-whisper 模型档位可在界面选择，不再固定 base\n3. 【口播·回退可见】云端失败自动回退本地并在界面标注本次实际来源，不再静默降级\n4. 【口播·交互】逐字稿双击原地改错别字、字幕位置改为在预览画面直接拖动、烧录字幕默认开启、预览停在最后一帧、导入显示首帧不自动播放、反复播放卡顿修复\n5. 【打包修复】imicut6.spec 漏收 koubo_cloud_asr，打包版选云端会 ImportError——已补齐并验证\n6. 【主题】全局默认浅色（含口播模块），仅在用户手动切换后才记忆\n7. 【语言解耦】界面语言与程序工作语言彻底分离：语言菜单只改显示，不驱动 ASR/词典/提示词/字幕行为\n8. 【i18n】口播第10批入典 + 状态栏/弹窗全量覆盖（简中/繁中/英/俄）\n9. 【安装包完整性】四个分卷的 sha256 已写入清单，程序逐卷校验，缺失或不匹配一律拒绝安装\n\nV3.5.6 更新：\n1. 【字幕同步修复】修复TTS音频裁剪后字幕时间戳探测逻辑：当trimmed文件过小时（<50%原始文件）回退探测原始文件，与_concat_audio_files内部逻辑一致，消除字幕滞后\n2. 【素材池扫描上限提升】兜底扫描上限从500提升到5000，并增加日志提示\n\nV3.5.5 更新：\n1. 【素材重复使用修复】4个匹配策略统一添加global_used_sources源文件去重逻辑\n2. 【VisualSmartTrimmer实现】无音频素材视觉智能裁剪+动态变速(最高1.3x)\n3. 【音频模式时长修复】音频模式total_duration强制=音频时长，修复38s音频→3m33s视频\n4. 【TTS气口修复】动态停顿silence=min(silence, default_pause)，用户设置值为上限\n5. 【素材池加载日志】新增总镜头数和源视频文件数日志输出\n\nV3.5.4 更新：\n1. 【音频模式时长修复】ASR现在返回duration字段；ffprobe全部改用打包版本不再依赖系统PATH；render_engine_av音频模式下total_duration强制等于音频时长；timeline强制对齐音频时长安全网\n2. 【文案模式字幕同步修复】_probe_duration改用打包ffprobe+PyAV兜底，确保TTS裁剪后音频时长探测成功，字幕不再落后于朗读\n3. 【音频直通mux修复】复用前面已探测的时长避免重复probe；probe失败时回退-shortest兜底；ffprobe路径改用BundledBinaries\n\nV3.5.3 更新：\n1. 【音频直通彻底修复】probe原始音频格式，MP4兼容格式直接-c:a copy流复制，WAV等格式用AAC 320k+显式-ar/-ac匹配原始采样率声道数；移除-shortest改用-t限定输出时长，彻底消除减速/截断/不完整问题\n\nV3.5.2 更新：\n1. 【音频模式字幕修复】ASR时间戳全0时按文本长度比例从音频时长重新生成时间戳\n2. 【音频模式音频直通】is_user_audio+无BGM时用FFmpeg mux原始音频，跳过解码-重编码\n3. 【系统学习增强】路径模糊匹配+auto记录归一化+segments为空时从records提取文案\n4. 【强复刻模式】从参考视频segments提取模板指导镜头序列和节奏",
+  "changelog": "V1.0.0.5 更新（2026-10-08，安装包 261008 + 增量补丁 261008）：\n1. 【千川·真实同步打通】数据接入按千川开放平台的活体接口契约重写传输层：端点、参数、凭证传递与错误语义逐条对着真实接口纠正；「测试」按钮真打上游、只验凭证不要求账户，失败时原样带上上游 code / message / request_id，不再把好凭证判成坏的。\n2. 【千川·一键发现账户】从凭证自动展开授权主体与店铺关联的投放账户并逐户验证能否取数，发现即登记，不必再手抄账户 ID；「可用 / 无权限 / 窗口内无投放 / 探测失败」逐户如实标注，无权限是千川后台的账户授权范围问题，不是凭证坏了。\n3. 【千川·同步正确性六类收口】同步区间、缺日回补、同步锚点、同步回执、金额量纲、翻页截断与账户校验一次性修掉；清旧改为按素材类型（视频 / 图片 / 图文）分范围，三轮不同类型的结果可共存不再互相覆盖。\n4. 【千川·同步即建档】同步到的素材自动落成成片库骨架，只补空字段、人工填写的那一半绝不覆盖；闭环分析页新增时长档 / 投放周龄 / 素材形态三张派生维度矩阵。\n5. 【API 配置弹窗】整体宽度夹进屏幕可用区，删除列与「全部测试」按钮不再跑到屏外。\n6. 【版本对齐】随包全部可执行文件版本统一到 1.0.0.5（主程序、AI 智能混剪、硬字幕去除器、声音克隆链、升级助手）。\n7. 【本轮更新方式】完整安装包与增量补丁同时发布：安装包为 7z 分卷 5 卷共 8,304,613,093 B（约 7.73 GiB，构建 261008）；补丁为 1.0.0.4→1.0.0.5 与 1.0.0.3→1.0.0.5 两条，已装任一已发布版本的机器都可直接升到最新版。两者都只替换程序文件，千川数据、素材整理索引、已下载模型与配置一律不动。\nV1.0.0.4 更新（2026-10-07，安装包 261007 + 增量补丁 261007）：\n1. 【千川·四象限】名单改为可滚动的完整清单，一屏十条、上下滚动看全，不再只给前几条。\n2. 【显示诚实性整类收口】全站 16 处「……等 N 条」式静默截断全部改为完整清单出口，一条数据都不许省略；缺件/失败项同样逐条列出。\n3. 【软件更新弹窗】模块清单补全为程序内全部 7 个模块（此前只显示 4 个，快速剪口播、千川数据分析、拍摄素材整理等被漏掉）；升级前新增「更新内容」明细，本次到底改了哪些条目直接列出来，不再只有一个更新按钮；随完整安装包整体发布、不能单独下载的模块如实标注原因，不会给出点了没反应的按钮；简中 / 繁中 / 英 / 俄四种语言下逐控件实测，按钮与说明文字一律不再超出弹窗。\n4. 【版本对齐】随包全部可执行文件版本统一到 1.0.0.4（主程序、AI 智能混剪、硬字幕去除器、声音克隆链、升级助手）。\n5. 【本轮更新方式】完整安装包与增量补丁同时发布：安装包为 7z 分卷 5 卷共 8,305,000,245 B（约 7.73 GiB，构建 261007）；补丁为 17 个文件 / 2,137,752,572 B（约 1.99 GiB），已装 1.0.0.3 的机器直接用程序内「检查更新」换装，不必重装。两者都只替换程序文件，千川数据、素材整理索引、已下载模型与配置一律不动。\nV1.0.0.3 更新（2026-10-06，安装包 261006b）：\n1. 【新增·千川数据分析】内嵌进创作中心，五页齐全：数据看板、闭环分析、成片库、对标复刻、数据接入；支持 CSV 导入与开放平台同步，盈亏线与阈值可设，可导出例会报告，多账户可切换，表格列宽可拖拽，图表与表格悬浮出当日读数。\n2. 【新增·拍摄素材整理】效率工具页新增「拍摄素材整理」：默认只导出不改原片，隔离需确认，绝不静默删除源素材。\n3. 【增量更新落地】代码补丁 + 进程外原子换装 + 校验失败自动回滚；补丁支持多基线，任一已发布版本都能直接升到最新版，不必逐版追赶。增量只触碰程序文件，用户数据、模型、配置一律不动。\n4. 【下线】短视频生成器与图片转视频下线，首页卡片与安装包可选模块同步换血。\n5. 【显示质量整类收口】口播 / AI 智能混剪 / 千川的裁字、省略号、文字与进度条重叠、悬浮读数时有时无、页头多余横线一次性修掉；简中 / 繁中 / 英 / 俄四语言逐页复验；界面语言只控制显示，不影响转录、词典、提示词与字幕行为。\n6. 【设置隔离】修正组织名/应用名写死导致多个程序设置互相串台；启动时把安装路径写入注册表，便于多位置安装时准确定位。\n7. 【安装包形态】7z 分卷 5 卷共约 7.73 GiB，五卷须放同一目录后用 7-Zip 解压 .7z.001；程序逐卷校验 sha256，缺一卷或摘要不匹配一律拒绝安装。\nV1.0.0.2 更新（2026-10-02，安装包 261002d，完整重建含模型捆绑修复）：\n1. 【随包模型全部真实可用】安装包内置的 whisper ggml 三档与人声分离 demucs 之前是截断件，现已按上游字节数逐卷核对随包发布；安装后首次使用不再触发下载或假就绪。\n2. 【模型就绪判定纠偏】人声分离模型不再以「文件存在」当作就绪（补齐体积下限与实际加载校验）；就绪检测不再把 onnx / openvino 等其它框架的导出件误算成缺件；两张指向不存在仓库的模型卡片已移除。\n3. 【📦 离线部署】AI 模型管理与声音克隆页新增「离线部署」，支持挂载与复制两种模式，部署前预检、部署后复检，离线机器可一次性把全量模型接入。\n4. 【快速剪口播】导入即归一化到工程制式，导出定死 1080P/30fps/48kHz 并提供 1080P/2K/4K 三档；导出路径按工程走；「导入视频」不再误新建工程覆盖当前素材；追加镜头不再报文件被占用；多段素材参数不一致时拼接与导出不再产生坏片；逐字稿说明、倍速按钮、进度条、画幅按钮排版全修。\n5. 【AI 智能混剪】工具条改单排横向滚动且不裁字；「视频字幕」胶囊回到标题同行右对齐；离线闸门补进语音链路；随机语音开关、按文案分类输出目录、原视频音量真正生效；素材台词级 NG/拍摄指令过滤，素材覆盖不再被池截断。\n6. 【达人视频混剪】启动默认回到项目概览；含封面素材自动剔除封面帧；导入按钮收敛为主按钮+选项；大量素材导入不再卡顿；无音轨/尺寸不一致素材的拼接导出不再硬失败。\n7. 【AI 模型管理】四页卡片统一为紧凑清单且文字不裁切；卡片被挤压、深链行遮挡、en/ru 弹窗收不下来等问题修复；模型归属单一真源，跨页跳转可返回。\n8. 【界面语言】第 6 批文案入典（含服务层与代码内直接绘制的字符串：波形/画布/字幕把手占位文字）；简中/繁中/英/俄四种语言逐页复验，俄文混剪页横向溢出与多处裁字消除；界面语言只控制显示，不驱动转录、词典、提示词或字幕行为。\n9. 【窗口与主题】程序启动按屏幕 82%×92% 居中并最大化，模型管理按主窗口 75%×86% 居中；全部模块默认浅色主题；预览支持空格播放/暂停与 F 全屏。\n10. 【更新链安全】更新弹窗体积改为按清单实算（不再写死 3GB）；清单缺任一分卷摘要即拒绝下载；整包解压后强制逐卷校验；被拒绝提权时更新器给出可见反馈。\n11. 【Win11 适配】未签名/SAC 装机前给可见警告；安装期按需开启长路径支持；前置组件失败不再静默成功；ARM64/AVX2 不满足时启动期明确报错。\n12. 【仓库可克隆性】.gitignore 曾吞掉所有包的 __init__.py/__main__.py（克隆即坏），已限定层级并补回；所有可执行文件 PE 版本统一到 1.0.0.2。\n13. 【安装包形态】7z 分卷由 4 卷增加到 5 卷（合计约 7.75 GB），五卷须放同一目录后用 7-Zip 解压 .7z.001。\nV1.0.0.1 更新（2026-09-30 第 9–12 轮修复收口，构建号 260930）：\n1. 【口播·布局】审核页改为 2×2 四区（逐字稿/预览在上，波形/素材顺序在下），四区之间可拖拽调整尺寸\n2. 【口播·语言】英文/俄文界面顶栏不再撑爆窗口，右栏设置页与字体下拉不再超出视口\n3. 【口播·工程】工程可随时保存与加载，空工程也进「最近工程」并标注素材为空，选中即加载不再静默\n4. 【口播·预览】预览总时长等于素材真实时长；美颜/调色/BGM/保留人声在预览里所见即所得；空格播放暂停、F 全屏\n5. 【混剪·按钮】AI 智能混剪工具条按按钮实测宽度换行并支持单排横向滚动，比例按钮与三个操作按钮在简中/繁中/英/俄下均完整可见\n6. 【混剪·选材】新增素材台词级 NG/拍摄指令过滤，素材覆盖不再被池上限截断；成片不满意页 9 项缺陷修复\n7. 【模型管理】四个页面统一为紧凑清单（与口播同款），卡片正文与按钮文案全部入典；模型归属单一真源，其他页深链可返回\n8. 【达人混剪】导入自动剔除封面帧，导入按钮收敛为两个主按钮加选项，大量素材导入不再卡顿\n9. 【安装包】首步即选界面语言并写入程序；构建期剥离运行垃圾，装机后不残留诊断文件；四个分卷的 sha256 已更新为本构建（260930），程序逐卷校验\n\nV1.0.0.1 更新（2026-09-27 全量重建，公测基线）：\n1. 【口播·云端 ASR】快速剪辑口播逐字转录新增可选「火山引擎云端」来源：热词/上下文增强提升专有名词准确率，云端受进程级离线闸门约束（勾选离线即直接不可用），密钥复用 API 配置里的火山引擎条目\n2. 【口播·本地模型档位】本地 faster-whisper 模型档位可在界面选择，不再固定 base\n3. 【口播·回退可见】云端失败自动回退本地并在界面标注本次实际来源，不再静默降级\n4. 【口播·交互】逐字稿双击原地改错别字、字幕位置改为在预览画面直接拖动、烧录字幕默认开启、预览停在最后一帧、导入显示首帧不自动播放、反复播放卡顿修复\n5. 【打包修复】imicut6.spec 漏收 koubo_cloud_asr，打包版选云端会 ImportError——已补齐并验证\n6. 【主题】全局默认浅色（含口播模块），仅在用户手动切换后才记忆\n7. 【语言解耦】界面语言与程序工作语言彻底分离：语言菜单只改显示，不驱动 ASR/词典/提示词/字幕行为\n8. 【i18n】口播第10批入典 + 状态栏/弹窗全量覆盖（简中/繁中/英/俄）\n9. 【安装包完整性】四个分卷的 sha256 已写入清单，程序逐卷校验，缺失或不匹配一律拒绝安装\n\nV3.5.6 更新：\n1. 【字幕同步修复】修复TTS音频裁剪后字幕时间戳探测逻辑：当trimmed文件过小时（<50%原始文件）回退探测原始文件，与_concat_audio_files内部逻辑一致，消除字幕滞后\n2. 【素材池扫描上限提升】兜底扫描上限从500提升到5000，并增加日志提示\n\nV3.5.5 更新：\n1. 【素材重复使用修复】4个匹配策略统一添加global_used_sources源文件去重逻辑\n2. 【VisualSmartTrimmer实现】无音频素材视觉智能裁剪+动态变速(最高1.3x)\n3. 【音频模式时长修复】音频模式total_duration强制=音频时长，修复38s音频→3m33s视频\n4. 【TTS气口修复】动态停顿silence=min(silence, default_pause)，用户设置值为上限\n5. 【素材池加载日志】新增总镜头数和源视频文件数日志输出\n\nV3.5.4 更新：\n1. 【音频模式时长修复】ASR现在返回duration字段；ffprobe全部改用打包版本不再依赖系统PATH；render_engine_av音频模式下total_duration强制等于音频时长；timeline强制对齐音频时长安全网\n2. 【文案模式字幕同步修复】_probe_duration改用打包ffprobe+PyAV兜底，确保TTS裁剪后音频时长探测成功，字幕不再落后于朗读\n3. 【音频直通mux修复】复用前面已探测的时长避免重复probe；probe失败时回退-shortest兜底；ffprobe路径改用BundledBinaries\n\nV3.5.3 更新：\n1. 【音频直通彻底修复】probe原始音频格式，MP4兼容格式直接-c:a copy流复制，WAV等格式用AAC 320k+显式-ar/-ac匹配原始采样率声道数；移除-shortest改用-t限定输出时长，彻底消除减速/截断/不完整问题\n\nV3.5.2 更新：\n1. 【音频模式字幕修复】ASR时间戳全0时按文本长度比例从音频时长重新生成时间戳\n2. 【音频模式音频直通】is_user_audio+无BGM时用FFmpeg mux原始音频，跳过解码-重编码\n3. 【系统学习增强】路径模糊匹配+auto记录归一化+segments为空时从records提取文案\n4. 【强复刻模式】从参考视频segments提取模板指导镜头序列和节奏",
   "modules": {
     "main_app": {
-      "version": "1.0.0.4",
+      "version": "1.0.0.5",
       "files": [
         "IMiCutAuto.exe",
         "_internal/"
@@ -13,30 +13,30 @@
       "url": "",
       "size": 8309520803,
       "sha256": "",
-      "note": "主程序（随完整安装包发布，见 installer；构建 261007）"
+      "note": "主程序（随完整安装包发布，见 installer；构建 261008）"
     },
     "minimcut": {
-      "version": "1.0.0.4",
+      "version": "1.0.0.5",
       "files": [
         "csharp_bin/MixCut.exe"
       ],
       "url": "",
       "size": 0,
       "sha256": "",
-      "note": "本模块无独立在线安装包：随完整安装包整体发布（清单 1.0.0.4 / 261007）"
+      "note": "本模块无独立在线安装包：随完整安装包整体发布（清单 1.0.0.5 / 261008）"
     },
     "subtitle_remover": {
-      "version": "1.0.0.4",
+      "version": "1.0.0.5",
       "files": [
         "subtitle_remover_bin/VideoSubtitleRemover.exe"
       ],
       "url": "",
       "size": 0,
       "sha256": "",
-      "note": "本模块无独立在线安装包：随完整安装包整体发布（清单 1.0.0.4 / 261007）"
+      "note": "本模块无独立在线安装包：随完整安装包整体发布（清单 1.0.0.5 / 261008）"
     },
     "voicebox": {
-      "version": "1.0.0.4",
+      "version": "1.0.0.5",
       "files": [
         "voicebox_bin/Voicebox.exe",
         "voicebox_bin/IMiVoice.exe",
@@ -48,194 +48,189 @@
       "url": "",
       "size": 0,
       "sha256": "",
-      "note": "本模块无独立在线安装包：随完整安装包整体发布（清单 1.0.0.4 / 261007）"
+      "note": "本模块无独立在线安装包：随完整安装包整体发布（清单 1.0.0.5 / 261008）"
     }
   },
   "installer": {
-    "version": "1.0.0.4",
+    "version": "1.0.0.5",
     "parts": 5,
     "urls": [
-      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.4-261007/IMiCutAuto_1.0.0.4_261007_x64.7z.001",
-      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.4-261007/IMiCutAuto_1.0.0.4_261007_x64.7z.002",
-      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.4-261007/IMiCutAuto_1.0.0.4_261007_x64.7z.003",
-      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.4-261007/IMiCutAuto_1.0.0.4_261007_x64.7z.004",
-      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.4-261007/IMiCutAuto_1.0.0.4_261007_x64.7z.005"
+      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.5-261008/IMiCutAuto_1.0.0.5_261008_x64.7z.001",
+      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.5-261008/IMiCutAuto_1.0.0.5_261008_x64.7z.002",
+      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.5-261008/IMiCutAuto_1.0.0.5_261008_x64.7z.003",
+      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.5-261008/IMiCutAuto_1.0.0.5_261008_x64.7z.004",
+      "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.5-261008/IMiCutAuto_1.0.0.5_261008_x64.7z.005"
     ],
     "sha256s": [
-      "38b8e7001f4e0a018dfc8c38a5a4375c713acaa2d1b08832cef0384b80f3ddf8",
-      "5ba399fb9bf7bfeeadd99371ca62eaf95c65dbdc14006ffd08a242633893a0ec",
-      "7a92b2542eb2ce125e9f181f9297cb179b0e2975cb39326e850d39b1bb14e098",
-      "7fa8889f7f88f0bc915daa4a16c61922dd7634dfee8accef3bed17ad89cb9666",
-      "c7d448a8ab18c50c6af18c2fff1a6f143d9dc9df2594902ecccb8b87c0c0f1cf"
+      "ba62ba9681b4f36849b472f2660e212a912b9cd2f6862e3d9795103c545f1956",
+      "78a2a0bbc7643b08e0408447cbe8dfbc9353fa4e47f39c743c6e69e35741874a",
+      "99ee671988ec2ff517df898350157ad5904ddd759a7ebce6c3c5d513dc09697a",
+      "d53bbc3a2990af65900e223b0e9389760bb4ae0320928b57fdcd18bafff7a354",
+      "6165fe0e595e1cc47fb3b6bd0ef646fb4da244f0ad79692be027343ccd494b47"
     ],
     "archive_type": "7z",
-    "note": "完整安装包 1.0.0.4（261007）：7z 分卷 5 卷共 8,305,000,245 B（约 7.73 GiB），五卷放同一目录后用 7-Zip 解压 IMiCutAuto_1.0.0.4_261007_x64.7z.001，再运行解压出的 exe 安装。程序逐卷校验 sha256，缺一卷或不匹配一律拒绝安装。已装 1.0.0.3 的机器不必重装，直接用程序内「检查更新」走增量补丁换装。",
-    "total_size": 8305000245
+    "note": "完整安装包 1.0.0.5（261008）：7z 分卷 5 卷共 8,304,613,093 B（约 7.73 GiB），五卷放同一目录后用 7-Zip 解压 IMiCutAuto_1.0.0.5_261008_x64.7z.001，再运行解压出的 exe 安装。程序逐卷校验 sha256，缺一卷或不匹配一律拒绝安装。已装 1.0.0.4 或 1.0.0.3 的机器不必重装，直接用程序内「检查更新」走增量补丁换装。",
+    "total_size": 8304613093
   },
   "patch": {
     "schema": 1,
-    "from_version": "1.0.0.3",
-    "to_version": "1.0.0.4",
-    "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.4-261007/IMiCutAuto_patch_1.0.0.3_to_1.0.0.4.zip",
-    "sha256": "151f41898c887ddd0f5e03e8a35df1baf6b48ddb9449fd28b84ddcdd00712292",
-    "size": 2137752572,
-    "uncompressed_size": 2191570583,
+    "from_version": "1.0.0.4",
+    "to_version": "1.0.0.5",
+    "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.5-261008/IMiCutAuto_patch_1.0.0.4_to_1.0.0.5.zip",
+    "sha256": "33f07b125ec88318b3014958aeba1b987049089f72f7f2cb9b9eb57b8a144f83",
+    "size": 2137785920,
+    "uncompressed_size": 2191578189,
     "files": [
       {
         "path": "IMiCutAuto.exe",
-        "sha256": "c17c40d72200bb6b963207d0e5ad6511ede36782f43199bbea3d903bb0e5a01a",
-        "size": 163686021
+        "sha256": "a9e67678f6fbd96ce0fa88426f4dfc1193841412656bacea3a5f526521f7cd5f",
+        "size": 163737143
       },
       {
         "path": "_internal/VERSION",
-        "sha256": "0f27dbcc12c080e8386a36a74eddedaca8dd149b3eba04e0e3cf5e7172a33874",
+        "sha256": "7d03be6958a384b978c813ff0779cd7d68d5f0df0078113e12c0cd3eec972e45",
         "size": 8
       },
       {
         "path": "_internal/base_library.zip",
-        "sha256": "7e668da011cd8e49843f54907e10f9ff92042c58b3b09a1ce2d0c205d8d4b163",
+        "sha256": "9511b4c50535238e0b2032646e6ab95a2be71d27f715707a59d944c8cc0ab582",
         "size": 1402481
       },
       {
         "path": "_internal/csharp_bin/MixCut.exe",
-        "sha256": "ff67e941f05a5c189fdb1ecf2f0ae8546c182f0f9d3b191b420c6149f6ff7f79",
-        "size": 146308155
+        "sha256": "4cde0d9b8da4f0cbb51fe0d4f722be72ec642f06ec818647ebe7e12e7edc44cf",
+        "size": 146308159
       },
       {
         "path": "_internal/csharp_bin/MixCut.pdb",
-        "sha256": "5ede3d9dbb79a227df833bba1b8a38b585d325f2bc76dfbc8092347f6c859ebe",
-        "size": 560156
+        "sha256": "27510ecfa34cff6eede09eb65d9dd4df48a35da561e549786b9b5a53bc8f0320",
+        "size": 560152
       },
       {
         "path": "_internal/subtitle_remover_bin/VideoSubtitleRemover.exe",
-        "sha256": "5e46602a4420b85cd0c66fd85136853e223c3e426e685201eb906db811f91390",
+        "sha256": "b86cbf2104cd6c9c1daa9a9563e754ea4b639be900c7f1df7dd380623ae01444",
         "size": 138089266
       },
       {
         "path": "_internal/subtitle_remover_bin/_internal/base_library.zip",
-        "sha256": "268d631a279283b6069c10d57e771cad8f5719d6c75b2dc92c73faaa5e1176e4",
+        "sha256": "8fba2292c2ff98bfb1c9f1ff57e514e6901b445f34649d90db24e188b051f31e",
         "size": 1402481
       },
       {
         "path": "_internal/update_manifest.json",
-        "sha256": "4dfe1778ee46e40078290df733709a2b520f6027abcf3a241b2999d6b5fc9e66",
-        "size": 21722
+        "sha256": "f39a2778b4708e21c03e45c21a79e86cc9e1214a123fbfc84d6d7f8bbfa2bbc8",
+        "size": 22456
       },
       {
         "path": "_internal/voicebox_bin/IMiVoice.exe",
-        "sha256": "145ba4af5dac32e550b175b2bb036ea5e94b293d3724157d8c288f73ee60852d",
+        "sha256": "ec7ffcab95823e685a4bede48be1b66e119bc3c501a1f8b988a731ef6be57e16",
         "size": 21971456
       },
       {
         "path": "_internal/voicebox_bin/Voicebox.exe",
-        "sha256": "145ba4af5dac32e550b175b2bb036ea5e94b293d3724157d8c288f73ee60852d",
+        "sha256": "ec7ffcab95823e685a4bede48be1b66e119bc3c501a1f8b988a731ef6be57e16",
         "size": 21971456
       },
       {
         "path": "_internal/voicebox_bin/backends/cuda/_internal/base_library.zip",
-        "sha256": "085a2eb3c8b4f6608c340bf650400d493fa980119caccd2d1127bc5343892655",
+        "sha256": "f9cb1b54186476873b8c6288d7fb5160ab74bb3c1377aa8d8ef02b29b5b13728",
         "size": 1402481
       },
       {
-        "path": "_internal/voicebox_bin/backends/cuda/_internal/core/model_root.py",
-        "sha256": "d4d28c2e1f876eeb3eae8dfd2bf6f60fbab1fb772eebe65c07707055e203e68a",
-        "size": 47090
-      },
-      {
         "path": "_internal/voicebox_bin/backends/cuda/voicebox-server-cuda.exe",
-        "sha256": "5766f72d1c45116aa60fec6bd8e5abf74f27c3b25138e750fa1eac8299b1eea2",
+        "sha256": "f33a88d1725b090055638ea27273a9311c94d784c5185cea25ea2d8a922e1502",
         "size": 124237250
       },
       {
         "path": "_internal/voicebox_bin/voicebox-mcp-x86_64-pc-windows-msvc.exe",
-        "sha256": "fe46807b1675887f0da3a0f86ee86ba6a23e0f8e033dda484fe4751dad026085",
-        "size": 10856060
+        "sha256": "6a03141019e425b27e97a8d5e0f6b92c701ae384b709f2d0796e8d1d71faa843",
+        "size": 10856607
       },
       {
         "path": "_internal/voicebox_bin/voicebox-mcp.exe",
-        "sha256": "fe46807b1675887f0da3a0f86ee86ba6a23e0f8e033dda484fe4751dad026085",
-        "size": 10856060
+        "sha256": "6a03141019e425b27e97a8d5e0f6b92c701ae384b709f2d0796e8d1d71faa843",
+        "size": 10856607
       },
       {
         "path": "_internal/voicebox_bin/voicebox-server-x86_64-pc-windows-msvc.exe",
-        "sha256": "177cf9755ad621313a5ed4808737bb3d3fd88e111fa01cdde9965434b177b155",
-        "size": 774379220
+        "sha256": "80f4b49bbc5a7d6088c8275f80ec54fd799caff829e2bb3aff94fd53558e5adc",
+        "size": 774380093
       },
       {
         "path": "_internal/voicebox_bin/voicebox-server.exe",
-        "sha256": "177cf9755ad621313a5ed4808737bb3d3fd88e111fa01cdde9965434b177b155",
-        "size": 774379220
+        "sha256": "80f4b49bbc5a7d6088c8275f80ec54fd799caff829e2bb3aff94fd53558e5adc",
+        "size": 774380093
       }
     ],
     "updater": {
-      "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.4-261007/IMiCutAuto_Updater_1.0.0.4.exe",
-      "sha256": "b063f74e22c2e49824bdb0ffd82e37ba60abad03f68ea139e882a389eec14a9b",
-      "size": 12144927
+      "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.5-261008/IMiCutAuto_Updater_1.0.0.5.exe",
+      "sha256": "f9488c982b4e13f10efdeeebba4ad54a7b133c8d2641e2d8954eb49aad679790",
+      "size": 12145743
     }
   },
   "patches": [
     {
       "schema": 1,
       "from_version": "1.0.0.3",
-      "to_version": "1.0.0.4",
-      "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.4-261007/IMiCutAuto_patch_1.0.0.3_to_1.0.0.4.zip",
-      "sha256": "151f41898c887ddd0f5e03e8a35df1baf6b48ddb9449fd28b84ddcdd00712292",
-      "size": 2137752572,
-      "uncompressed_size": 2191570583,
+      "to_version": "1.0.0.5",
+      "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.5-261008/IMiCutAuto_patch_1.0.0.3_to_1.0.0.5.zip",
+      "sha256": "8377d25eb086633c65e5bfe720e8c1ad87ae58171dd165a4858537799baee032",
+      "size": 2137800489,
+      "uncompressed_size": 2191625279,
       "files": [
         {
           "path": "IMiCutAuto.exe",
-          "sha256": "c17c40d72200bb6b963207d0e5ad6511ede36782f43199bbea3d903bb0e5a01a",
-          "size": 163686021
+          "sha256": "a9e67678f6fbd96ce0fa88426f4dfc1193841412656bacea3a5f526521f7cd5f",
+          "size": 163737143
         },
         {
           "path": "_internal/VERSION",
-          "sha256": "0f27dbcc12c080e8386a36a74eddedaca8dd149b3eba04e0e3cf5e7172a33874",
+          "sha256": "7d03be6958a384b978c813ff0779cd7d68d5f0df0078113e12c0cd3eec972e45",
           "size": 8
         },
         {
           "path": "_internal/base_library.zip",
-          "sha256": "7e668da011cd8e49843f54907e10f9ff92042c58b3b09a1ce2d0c205d8d4b163",
+          "sha256": "9511b4c50535238e0b2032646e6ab95a2be71d27f715707a59d944c8cc0ab582",
           "size": 1402481
         },
         {
           "path": "_internal/csharp_bin/MixCut.exe",
-          "sha256": "ff67e941f05a5c189fdb1ecf2f0ae8546c182f0f9d3b191b420c6149f6ff7f79",
-          "size": 146308155
+          "sha256": "4cde0d9b8da4f0cbb51fe0d4f722be72ec642f06ec818647ebe7e12e7edc44cf",
+          "size": 146308159
         },
         {
           "path": "_internal/csharp_bin/MixCut.pdb",
-          "sha256": "5ede3d9dbb79a227df833bba1b8a38b585d325f2bc76dfbc8092347f6c859ebe",
-          "size": 560156
+          "sha256": "27510ecfa34cff6eede09eb65d9dd4df48a35da561e549786b9b5a53bc8f0320",
+          "size": 560152
         },
         {
           "path": "_internal/subtitle_remover_bin/VideoSubtitleRemover.exe",
-          "sha256": "5e46602a4420b85cd0c66fd85136853e223c3e426e685201eb906db811f91390",
+          "sha256": "b86cbf2104cd6c9c1daa9a9563e754ea4b639be900c7f1df7dd380623ae01444",
           "size": 138089266
         },
         {
           "path": "_internal/subtitle_remover_bin/_internal/base_library.zip",
-          "sha256": "268d631a279283b6069c10d57e771cad8f5719d6c75b2dc92c73faaa5e1176e4",
+          "sha256": "8fba2292c2ff98bfb1c9f1ff57e514e6901b445f34649d90db24e188b051f31e",
           "size": 1402481
         },
         {
           "path": "_internal/update_manifest.json",
-          "sha256": "4dfe1778ee46e40078290df733709a2b520f6027abcf3a241b2999d6b5fc9e66",
-          "size": 21722
+          "sha256": "f39a2778b4708e21c03e45c21a79e86cc9e1214a123fbfc84d6d7f8bbfa2bbc8",
+          "size": 22456
         },
         {
           "path": "_internal/voicebox_bin/IMiVoice.exe",
-          "sha256": "145ba4af5dac32e550b175b2bb036ea5e94b293d3724157d8c288f73ee60852d",
+          "sha256": "ec7ffcab95823e685a4bede48be1b66e119bc3c501a1f8b988a731ef6be57e16",
           "size": 21971456
         },
         {
           "path": "_internal/voicebox_bin/Voicebox.exe",
-          "sha256": "145ba4af5dac32e550b175b2bb036ea5e94b293d3724157d8c288f73ee60852d",
+          "sha256": "ec7ffcab95823e685a4bede48be1b66e119bc3c501a1f8b988a731ef6be57e16",
           "size": 21971456
         },
         {
           "path": "_internal/voicebox_bin/backends/cuda/_internal/base_library.zip",
-          "sha256": "085a2eb3c8b4f6608c340bf650400d493fa980119caccd2d1127bc5343892655",
+          "sha256": "f9cb1b54186476873b8c6288d7fb5160ab74bb3c1377aa8d8ef02b29b5b13728",
           "size": 1402481
         },
         {
@@ -245,34 +240,130 @@
         },
         {
           "path": "_internal/voicebox_bin/backends/cuda/voicebox-server-cuda.exe",
-          "sha256": "5766f72d1c45116aa60fec6bd8e5abf74f27c3b25138e750fa1eac8299b1eea2",
+          "sha256": "f33a88d1725b090055638ea27273a9311c94d784c5185cea25ea2d8a922e1502",
           "size": 124237250
         },
         {
           "path": "_internal/voicebox_bin/voicebox-mcp-x86_64-pc-windows-msvc.exe",
-          "sha256": "fe46807b1675887f0da3a0f86ee86ba6a23e0f8e033dda484fe4751dad026085",
-          "size": 10856060
+          "sha256": "6a03141019e425b27e97a8d5e0f6b92c701ae384b709f2d0796e8d1d71faa843",
+          "size": 10856607
         },
         {
           "path": "_internal/voicebox_bin/voicebox-mcp.exe",
-          "sha256": "fe46807b1675887f0da3a0f86ee86ba6a23e0f8e033dda484fe4751dad026085",
-          "size": 10856060
+          "sha256": "6a03141019e425b27e97a8d5e0f6b92c701ae384b709f2d0796e8d1d71faa843",
+          "size": 10856607
         },
         {
           "path": "_internal/voicebox_bin/voicebox-server-x86_64-pc-windows-msvc.exe",
-          "sha256": "177cf9755ad621313a5ed4808737bb3d3fd88e111fa01cdde9965434b177b155",
-          "size": 774379220
+          "sha256": "80f4b49bbc5a7d6088c8275f80ec54fd799caff829e2bb3aff94fd53558e5adc",
+          "size": 774380093
         },
         {
           "path": "_internal/voicebox_bin/voicebox-server.exe",
-          "sha256": "177cf9755ad621313a5ed4808737bb3d3fd88e111fa01cdde9965434b177b155",
-          "size": 774379220
+          "sha256": "80f4b49bbc5a7d6088c8275f80ec54fd799caff829e2bb3aff94fd53558e5adc",
+          "size": 774380093
         }
       ],
       "updater": {
-        "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.4-261007/IMiCutAuto_Updater_1.0.0.4.exe",
-        "sha256": "b063f74e22c2e49824bdb0ffd82e37ba60abad03f68ea139e882a389eec14a9b",
-        "size": 12144927
+        "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.5-261008/IMiCutAuto_Updater_1.0.0.5.exe",
+        "sha256": "f9488c982b4e13f10efdeeebba4ad54a7b133c8d2641e2d8954eb49aad679790",
+        "size": 12145743
+      }
+    },
+    {
+      "schema": 1,
+      "from_version": "1.0.0.4",
+      "to_version": "1.0.0.5",
+      "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.5-261008/IMiCutAuto_patch_1.0.0.4_to_1.0.0.5.zip",
+      "sha256": "33f07b125ec88318b3014958aeba1b987049089f72f7f2cb9b9eb57b8a144f83",
+      "size": 2137785920,
+      "uncompressed_size": 2191578189,
+      "files": [
+        {
+          "path": "IMiCutAuto.exe",
+          "sha256": "a9e67678f6fbd96ce0fa88426f4dfc1193841412656bacea3a5f526521f7cd5f",
+          "size": 163737143
+        },
+        {
+          "path": "_internal/VERSION",
+          "sha256": "7d03be6958a384b978c813ff0779cd7d68d5f0df0078113e12c0cd3eec972e45",
+          "size": 8
+        },
+        {
+          "path": "_internal/base_library.zip",
+          "sha256": "9511b4c50535238e0b2032646e6ab95a2be71d27f715707a59d944c8cc0ab582",
+          "size": 1402481
+        },
+        {
+          "path": "_internal/csharp_bin/MixCut.exe",
+          "sha256": "4cde0d9b8da4f0cbb51fe0d4f722be72ec642f06ec818647ebe7e12e7edc44cf",
+          "size": 146308159
+        },
+        {
+          "path": "_internal/csharp_bin/MixCut.pdb",
+          "sha256": "27510ecfa34cff6eede09eb65d9dd4df48a35da561e549786b9b5a53bc8f0320",
+          "size": 560152
+        },
+        {
+          "path": "_internal/subtitle_remover_bin/VideoSubtitleRemover.exe",
+          "sha256": "b86cbf2104cd6c9c1daa9a9563e754ea4b639be900c7f1df7dd380623ae01444",
+          "size": 138089266
+        },
+        {
+          "path": "_internal/subtitle_remover_bin/_internal/base_library.zip",
+          "sha256": "8fba2292c2ff98bfb1c9f1ff57e514e6901b445f34649d90db24e188b051f31e",
+          "size": 1402481
+        },
+        {
+          "path": "_internal/update_manifest.json",
+          "sha256": "f39a2778b4708e21c03e45c21a79e86cc9e1214a123fbfc84d6d7f8bbfa2bbc8",
+          "size": 22456
+        },
+        {
+          "path": "_internal/voicebox_bin/IMiVoice.exe",
+          "sha256": "ec7ffcab95823e685a4bede48be1b66e119bc3c501a1f8b988a731ef6be57e16",
+          "size": 21971456
+        },
+        {
+          "path": "_internal/voicebox_bin/Voicebox.exe",
+          "sha256": "ec7ffcab95823e685a4bede48be1b66e119bc3c501a1f8b988a731ef6be57e16",
+          "size": 21971456
+        },
+        {
+          "path": "_internal/voicebox_bin/backends/cuda/_internal/base_library.zip",
+          "sha256": "f9cb1b54186476873b8c6288d7fb5160ab74bb3c1377aa8d8ef02b29b5b13728",
+          "size": 1402481
+        },
+        {
+          "path": "_internal/voicebox_bin/backends/cuda/voicebox-server-cuda.exe",
+          "sha256": "f33a88d1725b090055638ea27273a9311c94d784c5185cea25ea2d8a922e1502",
+          "size": 124237250
+        },
+        {
+          "path": "_internal/voicebox_bin/voicebox-mcp-x86_64-pc-windows-msvc.exe",
+          "sha256": "6a03141019e425b27e97a8d5e0f6b92c701ae384b709f2d0796e8d1d71faa843",
+          "size": 10856607
+        },
+        {
+          "path": "_internal/voicebox_bin/voicebox-mcp.exe",
+          "sha256": "6a03141019e425b27e97a8d5e0f6b92c701ae384b709f2d0796e8d1d71faa843",
+          "size": 10856607
+        },
+        {
+          "path": "_internal/voicebox_bin/voicebox-server-x86_64-pc-windows-msvc.exe",
+          "sha256": "80f4b49bbc5a7d6088c8275f80ec54fd799caff829e2bb3aff94fd53558e5adc",
+          "size": 774380093
+        },
+        {
+          "path": "_internal/voicebox_bin/voicebox-server.exe",
+          "sha256": "80f4b49bbc5a7d6088c8275f80ec54fd799caff829e2bb3aff94fd53558e5adc",
+          "size": 774380093
+        }
+      ],
+      "updater": {
+        "url": "https://github.com/Stanleygangan/IMiCutSamrtUpdate/releases/download/SmartcutV1.0.0.5-261008/IMiCutAuto_Updater_1.0.0.5.exe",
+        "sha256": "f9488c982b4e13f10efdeeebba4ad54a7b133c8d2641e2d8954eb49aad679790",
+        "size": 12145743
       }
     }
   ]
